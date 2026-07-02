@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estevan Elvandri — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!--
+  ============================================================
+  HOW TO EDIT THIS FILE — quick map for Tepan
+  ============================================================
+  1. PHOTOS (BAB II — Color & Frame section): each .grade-card
+     currently uses CSS gradients as stand-ins for real photos.
+     Replace the two divs with class "grade-before" / "grade-after"
+     with <img> tags pointing to your actual before/after shots.
+  2. GAME SCREENSHOT: the conveyor belt visual is a CSS/SVG mockup
+     of your actual mechanic. Swap the #game-visual block for a
+     real screenshot/gif whenever you have polished art.
+  3. LINKS: search for href="#" and replace with your real
+     GitHub / itch.io / LinkedIn / email.
+  4. COLORS: all colors live in the :root block under "THEME TOKENS".
+  ============================================================
+-->
+
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">Tepan<span>.</span></div>
+    <nav class="nav-links">
+      <a href="#game">Game</a>
+      <a href="#color">Photoshoot</a>
+      <a href="#academic">Academic</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="eyebrow">  Universitas Internasional Batam</div>
+    <h1>ESTEVAN ELVANDRI .</h1>
+    <p class="sub">I build cozy games, Colour Grading and Photoshoot, and I'm about to turn that craft into research — starting an Master Degree at Ming Chi University of Technology, Taiwan.</p>
+    <div class="photocard"> <img src="picture.jpeg" alt="img"> </div>
+    
+    <div class="pills">
+      
+      <span class="pill">Game Developer</span>
+      <span class="pill">Visual Colorist</span>
+      <span class="pill">Incoming M.S. Student</span>
+    </div>
+
+     
+      
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#game">See the work ↓</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="route-badge">Batam, Indonesia → New Taipei City, Taiwan</div>
+  </section>
+
+  <svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
+
+  <!-- ============ BAB I — GAME DEV ============ -->
+  <section class="bab" id="game">
+    <div class="bab-head">
+      
+      <span class="eyebrow"><H2>Game Development</H1></span>
+     
+      
+    </div>
+      <div class="project-divider">
+      <span class="project-num">PROJECT 01</span>
+    </div>
+    <div class="project-block">
+      <h2>Butik Pakde: Every Stitch Matters</h2>
+      <p class="lede">A cozy simulation game built in Unity (C#), developed following the GDLC methodology. Players run a tailor shop: orders come in with randomized clothing type, color, and pattern, move through conveyor-belt stations, and get validated against a profit-and-waste system.</p>
+
+      <div class="game-grid">
+        <div class="game-visual">
+          <video src="ButikPakde.mp4" controls style="width:100%; border-radius:8px; display:block;""></video>
+
+        </div>
+
+        <div>
+          <p>As the Full Programmer for Butik Pakde, I developed the entire game using Unity and C#, implementing core gameplay mechanics, user interface, game logic, and system integration. I also performed debugging and optimization to ensure a smooth and enjoyable gameplay experience.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">GDLC</span>
+            <span class="tech-tag">Singleton Architecture</span>
+            <span class="tech-tag">Cross-Resolution UI</span>
+          </div>
+          <a class="btn btn-ghost" href="https://itch.io/jam/infinite-learning-game-dev-b10/rate/4687448" rel="noopener">Itch.io →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-divider">
+      <span class="project-num">PROJECT 02</span>
+    </div>
+
+    <div class="project-block">
+      <h2>Project  Parenthood</h2>
+      <p class="lede">Project Parenthood is a 2D side scrolling pixel art life simulation that explores the emotional journey of becoming a parent. Instead of focusing on fast paced action, the game highlights the quiet, meaningful moments that define family life from the final day of pregnancy to a child’s first steps into the world.</p>
+
+      <div class="game-grid">
+        <div class="game-visual">
+            <img src="mJTq3N.png">
+        </div>
+
+        <div>
+          <p>As the Gameplay Programmer for Project: Parenthood, I developed the core gameplay systems, including the Checklist System, Penalty System, and Main Menu. I also integrated gameplay mechanics with the UI and conducted debugging and playtesting to ensure a smooth and engaging player experience.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">c#</span>
+            <span class="tech-tag">2D Game</span>
+            <span class="tech-tag">Parenthood</span>
+            <span class="tech-tag">GDLC</span>
+          </div>
+          <a class="btn btn-ghost" href="https://sisteminformasiuib.itch.io/projectparenthood" rel="noopener">itch.io →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
+
+  <!-- ============ BAB II — COLOR / PHOTO ============ -->
+  <section class="bab" id="color">
+    <div class="bab-head">
+    
+      <span class="eyebrow teal">Color &amp; Frame</span>
+    </div>
+    <h2>Color Grading &amp; Photoshoots</h2>
+    <p class="lede">Hands-on color grading work — favoring clean, fresh tonal palettes over heavy stylization. Hover or tap a frame to see the grade applied.</p>
+
+    <div class="grade-gallery">
+      <div class="grade-card g1" tabindex="0">
+        <div class="grade-before">
+          <img src="tealoreange.jpeg">
+        </div>
+        <div class="grade-after">
+          <img src="tealoreange2.jpg">
+        </div>
+        <div class="grade-tag">Teal &amp; Orange</div>
+      </div>
+      <div class="grade-card g2" tabindex="0">
+        <div class="grade-before"> <img src="golden.jpeg"></div>
+        <div class="grade-after"> <img src="golden2.jpg"></div>
+        <div class="grade-tag">Golden Hour</div>
+      </div>
+      <div class="grade-card g3" tabindex="0">
+        <div class="grade-before">
+         <img src="thai.jpeg">
+        </div>
+        <div class="grade-after">
+         <img src="thai2.png">
+        </div>
+        <div class="grade-tag">Miami Sunset</div>
+      </div>
+      <div class="grade-card g4" tabindex="0">
+        <div class="grade-before"><img src="IMG-20250522-WA0007.jpg"></div>
+        <div class="grade-after"><img src="noir.jpg"></div>
+        
+        <div class="grade-tag">Soft Noir</div>
+      </div>
+    </div>
+    <div class="hint"></div>
+  </section>
+
+  <svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
+
+  <!-- ============ BAB III — ACADEMIC ============ -->
+  <section class="bab" id="academic">
+    <div class="bab-head">
+      
+      <span class="eyebrow">Research &amp; Study</span>
+    </div>
+    <h2>From Batam to New Taipei City</h2>
+    <p class="lede">A running thread from coursework to certified independent study to graduate research.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2022 — Present</div>
+        <h3>Computer Science</h3>
+        <p>Universitas Internasional Batam.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Professional Experience — Certified Independent Study Program</div>
+        <h3>PT Infinite Learning, Batam</h3>
+        <p>Building "Butik Pakde" as the program's flagship project.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">International Experience</div>
+        <h3>Student Exchange—Universiti Teknikal Malaysia Melaka</h3>
+        <p>Jalan Hang Tuah Jaya, 76100 Durian Tunggal, Melaka, Malaysia. Faculty of Information and Communication Technology.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Incoming</div>
+        <h3>Master Degree — Ming Chi University of Technology</h3>
+        <p>New Taipei City, Taiwan. Research interests: game-based systems and human-computer interaction,interactive media,emotional design in short films.</p>
+      </div>
+    </div>
+  </section>
+
+  <svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer id="contact">
+    <div class="eyebrow">Contact</div>
+    
+    <div class="contact-row">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=estevanuib@gmail.com"><onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=estevanuib@gmail.com', '_blank'); return false;">
+  estevanuib@gmail.com</a>
+    </div>
+    <div class="social-row">
+      <a href="https://discord.gg/cWsWMn6x" >Discord</a>
+      <a href="https://wa.me/qr/XIZGXA2N5DMKL1" rel="noopener">Whatsapp</a>
+      <a href="https://playbit02.itch.io/" rel="noopener">itch.io</a>
+    </div>
+    <div class="fine-print"> © 2026 Estevan Elvandri.</div>
+  </footer>
+
+</main>
+
+<script>
+  // Reveal sections + sew the seam dividers as they enter view
+  const reveal = (selector, className) => {
+    const els = document.querySelectorAll(selector);
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          e.target.classList.add(className);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(el => obs.observe(el));
+  };
+  reveal('section.bab', 'in-view');
+  reveal('svg.seam', 'sewn');
+
+  // Tap-to-toggle grade cards for touch devices
+  document.querySelectorAll('.grade-card').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('toggled'));
+  });
+</script>
+
+</body>
+</html>
