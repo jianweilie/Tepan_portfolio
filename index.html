@@ -34,6 +34,7 @@
     <div class="logo">Tepan<span>.</span></div>
     <nav class="nav-links">
       <a href="#game">Game</a>
+      <a href="#design">Design</a>
       <a href="#color">Photoshoot</a>
       <a href="#academic">Academic</a>
       <a href="#contact">Contact</a>
@@ -134,6 +135,60 @@
 
   <svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
 
+
+  <!-- ============ BAB — DIGITAL DESIGN ============ -->
+<section class="bab" id="design">
+  <div class="bab-head">
+    <span class="eyebrow">Digital Design</span>
+  </div>
+  <h2>Graphic Design &amp; UI/UX</h2>
+  <p class="lede">Visual Design</p>
+
+  <div class="design-gallery">
+    <figure class="design-item">
+  <img src="Yellow and Black Minimal Jajanan Traditional Menu (1).png"
+       data-images="Yellow and Black Minimal Jajanan Traditional Menu (1).png|Beige Brown Minimal with Lineart Illustration Menu Template (1).png"
+       alt="Menu design" loading="lazy">
+  <figcaption>Menu Design</figcaption>
+  </figure>
+    
+    <figure class="design-item">
+      <img src="Kuning dan Hitam Modern Annual Report Cover A4 Document.png" alt="UI concept" loading="lazy">
+      <figcaption>Cover Design</figcaption>
+    </figure>
+    <figure class="design-item">
+      <img src="Gold Green Elegant Eid Mubarak Instagram Story.png" alt="Digital illustration" loading="lazy">
+      <figcaption>Card Design</figcaption>
+    </figure>
+    
+    <figure class="design-item">
+      <img src="Biru Kuning Elegant Illustrative Poster Ucapan Isra Miraj.jpg" alt="Digital illustration" loading="lazy">
+      <figcaption>Poster Design</figcaption>
+    </figure>
+    <figure class="design-item">
+      <img src="logo.jpg" alt="Digital illustration" loading="lazy">
+      <figcaption>Logo Design</figcaption>
+    </figure>
+  
+    <figure class="design-item">
+  <img src="website1.png"
+       data-images="website1.png|website2.png|website3.png"
+       alt="Menu design" loading="lazy">
+
+  <figcaption>Website UI Design</figcaption>
+</figure>
+<figure class="design-item link-only">
+  <a href="https://www.figma.com/proto/q5mHRUSwM3s6WnEBeQKKpC/Untitled?node-id=1-2&t=SXer5amRIouBBNnl-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=84%3A125" rel="noopener">
+    <img src="mobile.png" alt="Menu design" loading="lazy">
+    <figcaption>Mobile App UI Design</figcaption>
+  </a>
+</figure>
+  </div>
+</section>
+
+<svg class="seam" viewBox="0 0 1000 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 H1000"/></svg>
+
+
   <!-- ============ BAB II — COLOR / PHOTO ============ -->
   <section class="bab" id="color">
     <div class="bab-head">
@@ -231,6 +286,12 @@
   </footer>
 
 </main>
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn" id="lb-prev">‹</button>
+  <img alt="">
+  <button class="lb-btn" id="lb-next">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
 
 <script>
   // Reveal sections + sew the seam dividers as they enter view
@@ -253,6 +314,46 @@
   document.querySelectorAll('.grade-card').forEach(card => {
     card.addEventListener('click', () => card.classList.toggle('toggled'));
   });
+    // Lightbox for design gallery (multi foto)
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  const lbCount = document.getElementById('lb-count');
+  let images = [];
+  let index = 0;
+
+  function showImage() {
+    lbImg.src = images[index];
+    const multi = images.length > 1;
+    lbPrev.style.display = multi ? 'block' : 'none';
+    lbNext.style.display = multi ? 'block' : 'none';
+    lbCount.textContent = multi ? (index + 1) + ' / ' + images.length : '';
+  }
+  function step(n) {
+    index = (index + n + images.length) % images.length;
+    showImage();
+  }
+
+  document.querySelectorAll('.design-item:not(.link-only) img').forEach(img => {
+    img.addEventListener('click', () => {
+      images = img.dataset.images ? img.dataset.images.split('|') : [img.src];
+      index = 0;
+      showImage();
+      lb.style.display = 'flex';
+    });
+  });
+
+  lbPrev.addEventListener('click', e => { e.stopPropagation(); step(-1); });
+  lbNext.addEventListener('click', e => { e.stopPropagation(); step(1); });
+  lb.addEventListener('click', e => { if (e.target === lb) lb.style.display = 'none'; });
+  document.addEventListener('keydown', e => {
+    if (lb.style.display !== 'flex') return;
+    if (e.key === 'Escape') lb.style.display = 'none';
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+  
 </script>
 
 </body>
